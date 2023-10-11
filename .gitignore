@@ -1,0 +1,13 @@
+# files
+.phpunit.result.cache
+.php-cs-fixer.cache
+composer.lock
+
+
+# dirs
+vendor/
+tools/
+tests/samples/
+
+# For personal tests (will be included soon)
+examples/

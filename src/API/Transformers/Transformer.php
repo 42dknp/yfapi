@@ -1,0 +1,70 @@
+<?php declare(strict_types=1);
+/**
+ * Copyright 2023 Dominic Kneup.
+ *
+ * Licensed under the MIT License, you find the LICENSE file in the projects 
+ * root folder; you may not use this file except in compliance with the License.
+ */
+
+namespace yfAPI\API\Transformers;
+
+use yfAPI\API\Interfaces\TransformerInterface;
+use yfAPI\Exceptions\ValidatorExceptions;
+
+/**
+ * Class Transformer
+ *
+ * @category Transformer
+ * @package  42dknp/yfapi-php
+ * @author   Dominic Kneup
+ * @license  MIT License
+ * @link     https://github.com/42dknp/yfapi-php
+ */
+class Transformer implements TransformerInterface
+{
+     /**
+      * Convert string to array
+      * 
+      * @param string $response 
+      * 
+      * @throws ValidatorExceptions
+      * 
+      * @return mixed[<mixed>]
+      */
+    public static function decodeJsonResponse(string $response): mixed
+    {
+        $responseData = json_decode($response);
+        
+        if (!$responseData) {
+            throw new ValidatorExceptions('Invalid JSON');
+        }
+
+        return $responseData;
+    }
+
+    /**
+     * Flatten Data
+     * 
+     * @param mixed[] $data
+     * 
+     * @return object
+     */
+    public static function flattenData(array $data): object
+    {
+        $object = new \stdClass(); // Create a generic object
+
+        foreach ($data as $key => $value) {
+
+            if (is_object($value) && isset($value->raw)) {
+
+                $object->$key = $value->raw;
+
+            } elseif (is_string($value)) {
+
+                $object->$key = $value;
+                
+            }
+        }
+        return $object; 
+    }
+}
