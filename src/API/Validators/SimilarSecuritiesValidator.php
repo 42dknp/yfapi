@@ -48,9 +48,9 @@ class SimilarSecuritiesValidator implements SimilarSecuritiesValidatorInterface
     /**
      * Transform Results to object
      *
-     * @param object $data
+     * @param object $data: A list with Similar Securities Data
      * 
-     * @return void
+     * @return void: None
      */
     public static function validateResults(object $data): void
     { 

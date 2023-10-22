@@ -26,12 +26,13 @@ class HistoricDataTransformer implements HistoricDataTransformerInterface
 {
     
     /**
-     * Transform Results  
+     * Validates and Transforms  Historic Data
      *
-     * @param string $result
+     * @param string $result: The raw json from API as input
+     * @param string $output: Defines the output format
      * 
      * @throws TransformerExceptions
-     * @return mixed[]
+     * @return mixed[]: A list with Historic Data
      */
     public static function transformResults(string $result, string $output): array
     {
@@ -76,14 +77,15 @@ class HistoricDataTransformer implements HistoricDataTransformerInterface
     /**
      * Transform Single Result Data 
      *
-     * @param $timestamp
-     * @param float $open
-     * @param float $low
-     * @param float $high
-     * @param float $close
-     * @param float $adjClose
+     * @param int $timestamp: date and time in the Unix format
+     * @param float $open: The starting price of a stock on a trading day.
+     * @param float $low: The lowest price the stock reached during the day.
+     * @param float $high: The highest price the stock reached during the day.
+     * @param float $close:  The last price at the end of the trading day.
+     * @param float $adjClose: The closing price adjusted for factors like dividends and stock splits for accurate historical analysis.
+     * @param string $output: Define output format, either list or dict
      * 
-     * @return mixed[]
+     * @return mixed[]: Array or Object
      */
     public static function transformSimgleData(int $timestamp, float $open, float $low, float $high, float $close, float $adjClose, string $output): object | array
     {
@@ -103,12 +105,12 @@ class HistoricDataTransformer implements HistoricDataTransformerInterface
     /**
      * Return Historic Data in specified Output Format
      * 
-     * @param string $data
-     * @param string $output
+     * @param string $data:  raw json as input
+     * @param string $output: either raw, object or array
      * 
      * @throws TransformerExceptions
      * 
-     * @return mixed[]
+     * @return mixed[]: Returns converted and formatted datas
      */
     public static function output(string $data, string $output): string | object | array
     {   

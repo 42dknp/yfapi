@@ -61,10 +61,10 @@ class QuoteValidator implements QuoteValidatorInterface
     /**
      * Validate Quote Results
      * 
-     * @param object $data
+     * @param object $data: Data to validate
      * 
      * @throws ValidatorExceptions
-     * @return void
+     * @return void: None
      */
     public static function validateResults(object $data): void 
     {

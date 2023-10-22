@@ -40,7 +40,7 @@ class Crumb extends APIClient
     /**
      * Get Yahoo Finance Crumb 
      * 
-     * @return string
+     * @return string: A new crumb for further use
      */
     public function getCrumb(): string
     {

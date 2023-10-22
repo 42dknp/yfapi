@@ -40,9 +40,9 @@ class SimilarSecurities extends APIClient
     /**
      * Get similar Securities API Call
      *
-     * @param string $security
+     * @param string $security: The Security / Stock symbol
      * 
-     * @return mixed[]
+     * @return mixed[]: A raw json string, or array
      */
     public function getSimilarSecurities(string $security): array | string
     {

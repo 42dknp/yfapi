@@ -96,10 +96,10 @@ class Quote extends Crumb
     /**
      * Get current Quote (prices etc.)
      * 
-     * @param string        $symbol
+     * @param string $symboll: The Security / Stock symbol
      * @param array<string> $fields
      *      
-     * @return mixed[]
+     * @return mixed[]: A raw json string, object or array
      */
     public function getQuote(string $symbol, array $fields = []): string | object | array
     {

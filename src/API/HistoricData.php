@@ -56,12 +56,12 @@ class HistoricData extends APIClient
     /**
      * Get Historic Data API Call
      *
-     * @param string             $stock
-     * @param \DateTimeInterface $startDate
-     * @param \DateTimeInterface $endDate
+     * @param string $stock: The Security / Stock symbol
+     * @param \DateTimeInterface $startDate: Specify the start date
+     * @param \DateTimeInterface $endDate: Specify the end date
      * 
      * @throws \Exception
-     * @return mixed[]
+     * @return mixed[]: A raw json string, object or array
      */
     public function getHistoricData(string $stock, \DateTimeInterface $startDate, \DateTimeInterface $endDate): string | object | array 
     {   
@@ -96,9 +96,9 @@ class HistoricData extends APIClient
      /**
       * Get Historic Data for YTD
       *
-      * @param string $symbol
+      * @param string $symbol: The Security / Stock symbol
       * 
-      * @return mixed[]
+      * @return mixed[]: A raw json string, object or array
       */
     public function getHistoricDataYTD(string $symbol): string | object | array 
     {
@@ -112,9 +112,9 @@ class HistoricData extends APIClient
     /**
      * Get Historic Data for Last Year 
      *
-     * @param string $symbol
+     * @param string $symbol: The Security / Stock symbol
      * 
-     * @return mixed[]
+     * @return mixed[]: A raw json string, object or array
      */
     public function getHistoricDataLastYear(string $symbol): string | object | array 
     {
@@ -128,9 +128,9 @@ class HistoricData extends APIClient
     /**
      * Get Historic Data for Last Month 
      *
-     * @param string $symbol
+     * @param string $symbol: The Security / Stock symbol
      * 
-     * @return mixed[]
+     * @return mixed[]: A raw json string, object or array
      */
     public function getHistoricDataLastMonth(string $symbol): string | object | array 
     {
@@ -144,9 +144,9 @@ class HistoricData extends APIClient
     /**
      * Get Historic Data for Last Week 
      *
-     * @param string $symbol
+     * @param string $symbol: The Security / Stock symbol
      * 
-     * @return mixed[]
+     * @return mixed[]: A raw json string, object or array
      */
     public function getHistoricDataLastWeek(string $symbol): string | object | array 
     {

@@ -26,9 +26,9 @@ class CrumbValidator implements CrumbValidatorInterface
     /**
      * Validate Crumb is not empty 
      * 
-     * @param string $crumb
+     * @param string $crumb: Crumb as string
      * 
-     * @return string
+     * @return string: returns the crumb if valid
      */
     public static function validateCrumb(string $crumb): string
     {

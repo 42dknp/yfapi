@@ -34,11 +34,11 @@ class Validator implements ValidatorInterface
     /**
      * Validate URL
      *      
-     * @param string $url
+     * @param string $url: A url to validate
      * 
      * @throws ValidatorExceptions
      * 
-     * @return bool
+     * @return bool: True if valid URL, throws Exception if not
      */
     public static function validURL(string $url): bool
     {
@@ -52,11 +52,11 @@ class Validator implements ValidatorInterface
     /**
      * Check if interval parameter is valid
      *
-     * @param string $interval
+     * @param string $interval: interval to check
      * 
      * @throws ValidatorExceptions
      * 
-     * @return bool
+     * @return bool: True if valid interval, throws Exception if not
      */
     public static function checkInterval(string $interval): bool
     {
@@ -75,7 +75,7 @@ class Validator implements ValidatorInterface
      * @param \DateTimeInterface $endDate
      * 
      * @throws ValidatorExceptions
-     * @return bool
+     * @return bool: True if $start_date and $end_date exists and $start_date > $end_date, throws Exception if not
      */
     public static function validateDates(\DateTimeInterface $startDate, \DateTimeInterface $endDate): bool
     {
@@ -89,10 +89,10 @@ class Validator implements ValidatorInterface
     /**
      * Check User Agent file 
      * 
-     * @param string $path
+     * @param string $path: Path to file
      * 
      * @throws ValidatorExceptions
-     * @return bool
+     * @return bool: True if file exists, throws Exception if not
      */
     public static function checkUserAgentFileExists(string $path): bool
     {
@@ -105,10 +105,10 @@ class Validator implements ValidatorInterface
     /**
      * Check User Agent file is empty or not an array
      * 
-     * @param mixed[] $userAgents
+     * @param mixed[] $userAgents: array of User Agents
      * 
      * @throws ValidatorExceptions
-     * @return bool
+     * @return bool: True if array throws Exception if not
      */
     public static function checkUserAgentFileEmptyOrNoArray(array $userAgents): bool
     {

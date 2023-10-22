@@ -25,11 +25,11 @@ class Transformer implements TransformerInterface
      /**
       * Convert string to array
       * 
-      * @param string $response 
+      * @param string $response: raw json string as input
       * 
       * @throws ValidatorExceptions
       * 
-      * @return mixed[<mixed>]
+      * @return mixed[<mixed>]: returns an object
       */
     public static function decodeJsonResponse(string $response): mixed
     {
@@ -43,11 +43,11 @@ class Transformer implements TransformerInterface
     }
 
     /**
-     * Flatten Data
+     * Flattens Multi-dimensional array into a 1-dimensional one
      * 
-     * @param mixed[] $data
+     * @param mixed[] $data: Multi-dimensional array
      * 
-     * @return object
+     * @return object: Return a "flat" Object
      */
     public static function flattenData(array $data): object
     {

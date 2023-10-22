@@ -62,13 +62,13 @@ class APIClient implements APIClientInterface
     /**
      * Send GET request with $url to endpoint and return answer
      * 
-     * @param string            $url 
-     * @param array<string|int> $params 
+     * @param string $url : The URL for the API request.
+     * @param array<string|int> $params: The parameters for the API request.
      * 
      * @throws RequestException
      * @throws ConnectException
      * 
-     * @return string
+     * @return string: The response from the API as a string.
      */
     public function requestAPI(string $url, array $params = []): string
     {
@@ -102,11 +102,11 @@ class APIClient implements APIClientInterface
     }
 
     /**
-     * Get a random User Agent from useragent.json file
+     * Get a random User Agent from useragents.json file
      * 
      * @throws APIClientException
      * 
-     * @return mixed
+     * @return mixed: Returns a random User Agent
      */
     public static function getRandomUserAgent(): mixed
     {

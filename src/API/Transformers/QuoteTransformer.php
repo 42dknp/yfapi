@@ -28,8 +28,8 @@ class QuoteTransformer implements QuoteTransformerInterface
     /**
      * Transform API result
      * 
-     * @param string $result 
-     * 
+     * @param string $result: The raw json from API as input
+     * @param string $type: API type (e.g. quote)
      * @throws TransformerExceptions
      * 
      * @return object
@@ -54,12 +54,12 @@ class QuoteTransformer implements QuoteTransformerInterface
     /**
      * Check for allowed fields (array), combine and return as string
      * 
-     * @param mixed[] $fields
-     * @param mixed[] $allowedFields
+     * @param mixed[] $fields: Input Fields
+     * @param mixed[] $allowedFields: Allowed Fields input
      * 
      * @throws TransformerExceptions
      * 
-     * @return string
+     * @return string: a string with all fields (for use in API request)
      */
     public static function transformFields(array $fields, array $allowedFields): string
     {   
@@ -82,9 +82,9 @@ class QuoteTransformer implements QuoteTransformerInterface
     /**
      * Return Quote as Object
      * 
-     * @param string $data
+     * @param string $data: raw json data as input
      * 
-     * @return object
+     * @return object: converted Quote Data as Output
      */
     public static function returnQuoteAsObj(string $data): object
     {
@@ -94,9 +94,9 @@ class QuoteTransformer implements QuoteTransformerInterface
     /**
      * Return Quote as Array
      * 
-     * @param string $data
+     * @param string $data raw json data as input
      * 
-     * @return mixed[]
+     * @return mixed[]: converted Quote Data as Output
      */
     public static function returnQuoteAsArray(string $data): array
     {
@@ -108,12 +108,12 @@ class QuoteTransformer implements QuoteTransformerInterface
     /** 
      * Return Quote in specified Output Format
      * 
-     * @param string $data
-     * @param string $format
+     * @param string $data: raw json as input
+     * @param string $format: either raw (string), object or array
      * 
      * @throws TransformerExceptions
      * 
-     * @return mixed[]
+     * @return mixed[]: Return converted and formatted data
      */
     public static function output(string $data, string $format): string | object | array
     {

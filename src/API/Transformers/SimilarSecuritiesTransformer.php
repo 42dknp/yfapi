@@ -34,11 +34,11 @@ class SimilarSecuritiesTransformer implements SimilarSecuritiesTransformerInterf
     /**
      * Transform Results
      * 
-     * @param string $data
+     * @param string $data: The raw json from API as input
      * 
      * @throws TransformerExceptions
      * 
-     * @return mixed[]
+     * @return mixed[]: Array with Similar Securities Data
      */
     public static function transform(string $data): array
     {
@@ -75,14 +75,14 @@ class SimilarSecuritiesTransformer implements SimilarSecuritiesTransformerInterf
     }
      
     /**
-     * Return Results as Array
+     * Takes raw json from API response and converts / formats it
      *
-     * @param string $data
-     * @param string $format
+     * @param string $data: raw json as input
+     * @param string $format: either raw (string) or array
      * 
      * @throws TransformerExceptions
      * 
-     * @return mixed[]
+     * @return mixed[]: Return converted and formatted data
      */
     public static function output(string $data, string $format): array | string
     {   
