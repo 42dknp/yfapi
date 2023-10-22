@@ -56,20 +56,20 @@ class HistoricData extends APIClient
     /**
      * Get Historic Data API Call
      *
-     * @param string $stock: The Security / Stock symbol
+     * @param string $symbol: The Security / Stock symbol
      * @param \DateTimeInterface $startDate: Specify the start date
      * @param \DateTimeInterface $endDate: Specify the end date
      * 
      * @throws \Exception
      * @return mixed[]: A raw json string, object or array
      */
-    public function getHistoricData(string $stock, \DateTimeInterface $startDate, \DateTimeInterface $endDate): string | object | array 
+    public function getHistoricData(string $symbol, \DateTimeInterface $startDate, \DateTimeInterface $endDate): string | object | array 
     {   
         // Validate given parameters ($startDate, $endDate & $this->interval)
         if (Validator::checkInterval($this->interval) && Validator::validateDates($startDate, $endDate)) {
 
             // URL endpoint
-            $url = $this->endpoint . $stock;
+            $url = $this->endpoint . $symbol;
 
             // Check if $this->crumb was defined by user, get a new crumb if not
             if (empty($this->crumb)) : 
