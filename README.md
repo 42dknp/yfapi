@@ -193,7 +193,46 @@ stdClass Object
     ...
 )
 ```
+### Search 
 
+You can search for Keywords and recieve an array of arrays / objects or raw json string from Search API
+
+```php
+use yfAPI\API\Search;
+
+$search = new Search();
+
+$searchTerm = "Advanced Micro";
+
+$getSearchResults = $search->searchFor($searchTerm);
+
+print_r($getSearchResults);
+```
+
+The output looks like this:
+```php
+Array
+(
+    [0] => stdClass Object
+        (
+            [exchange] => NMS
+            [shortname] => Advanced Micro Devices, Inc.
+            [quoteType] => EQUITY
+            [symbol] => AMD
+            [index] => quotes
+            [score] => 259705
+            [typeDisp] => Equity
+            [longname] => Advanced Micro Devices, Inc.
+            [exchDisp] => NASDAQ
+            [sector] => Technology
+            [sectorDisp] => Technology
+            [industry] => Semiconductors
+            [industryDisp] => Semiconductors
+            [dispSecIndFlag] => 1
+            [isYahooFinance] => 1
+        )
+        ...
+```
 
 ## Output Formats
 Here is a list of default Output formats:
@@ -210,6 +249,8 @@ Here is a list of default Output formats:
 #### Crumb
 **Default**: string (you can´t change the $output attribute) | **Optional**: none
 
+#### Search
+**Default**: array of objects | **Optional**: array of arrays, raw (json text string)
 
 
 ## Changing the instance attribute $output you can get a different output format
