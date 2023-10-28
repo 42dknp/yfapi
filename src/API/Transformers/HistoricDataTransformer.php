@@ -77,13 +77,13 @@ class HistoricDataTransformer implements HistoricDataTransformerInterface
     /**
      * Transform Single Result Data 
      *
-     * @param int $timestamp: date and time in the Unix format
-     * @param float $open: The starting price of a stock on a trading day.
-     * @param float $low: The lowest price the stock reached during the day.
-     * @param float $high: The highest price the stock reached during the day.
-     * @param float $close:  The last price at the end of the trading day.
-     * @param float $adjClose: The closing price adjusted for factors like dividends and stock splits for accurate historical analysis.
-     * @param string $output: Define output format, either list or dict
+     * @param int    $timestamp: date and time in the Unix format
+     * @param float  $open:      The starting price of a stock on a trading day.
+     * @param float  $low:       The lowest price the stock reached during the day.
+     * @param float  $high:      The highest price the stock reached during the day.
+     * @param float  $close:     The last price at the end of the trading day.
+     * @param float  $adjClose:  The closing price adjusted for factors like dividends and stock splits for accurate historical analysis.
+     * @param string $output:    Define output format, either list or dict
      * 
      * @return mixed[]: Array or Object
      */
@@ -105,7 +105,7 @@ class HistoricDataTransformer implements HistoricDataTransformerInterface
     /**
      * Return Historic Data in specified Output Format
      * 
-     * @param string $data:  raw json as input
+     * @param string $data:   raw json as input
      * @param string $output: either raw, object or array
      * 
      * @throws TransformerExceptions

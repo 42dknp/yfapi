@@ -56,9 +56,9 @@ class HistoricData extends APIClient
     /**
      * Get Historic Data API Call
      *
-     * @param string $symbol: The Security / Stock symbol
+     * @param string             $symbol:    The Security / Stock symbol
      * @param \DateTimeInterface $startDate: Specify the start date
-     * @param \DateTimeInterface $endDate: Specify the end date
+     * @param \DateTimeInterface $endDate:   Specify the end date
      * 
      * @throws \Exception
      * @return mixed[]: A raw json string, object or array

@@ -77,7 +77,7 @@ class SimilarSecuritiesTransformer implements SimilarSecuritiesTransformerInterf
     /**
      * Takes raw json from API response and converts / formats it
      *
-     * @param string $data: raw json as input
+     * @param string $data:   raw json as input
      * @param string $format: either raw (string) or array
      * 
      * @throws TransformerExceptions

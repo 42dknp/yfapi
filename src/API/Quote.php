@@ -96,7 +96,7 @@ class Quote extends Crumb
     /**
      * Get current Quote (prices etc.)
      * 
-     * @param string $symboll: The Security / Stock symbol
+     * @param string        $symbol: The Security / Stock symbol
      * @param array<string> $fields
      *      
      * @return mixed[]: A raw json string, object or array

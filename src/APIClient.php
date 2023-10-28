@@ -62,7 +62,7 @@ class APIClient implements APIClientInterface
     /**
      * Send GET request with $url to endpoint and return answer
      * 
-     * @param string $url : The URL for the API request.
+     * @param string            $url     : The URL for the API request.
      * @param array<string|int> $params: The parameters for the API request.
      * 
      * @throws RequestException

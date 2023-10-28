@@ -29,7 +29,8 @@ class QuoteTransformer implements QuoteTransformerInterface
      * Transform API result
      * 
      * @param string $result: The raw json from API as input
-     * @param string $type: API type (e.g. quote)
+     * @param string $type:   API type (e.g. quote)
+     * 
      * @throws TransformerExceptions
      * 
      * @return object
@@ -54,7 +55,7 @@ class QuoteTransformer implements QuoteTransformerInterface
     /**
      * Check for allowed fields (array), combine and return as string
      * 
-     * @param mixed[] $fields: Input Fields
+     * @param mixed[] $fields:        Input Fields
      * @param mixed[] $allowedFields: Allowed Fields input
      * 
      * @throws TransformerExceptions
@@ -108,7 +109,7 @@ class QuoteTransformer implements QuoteTransformerInterface
     /** 
      * Return Quote in specified Output Format
      * 
-     * @param string $data: raw json as input
+     * @param string $data:   raw json as input
      * @param string $format: either raw (string), object or array
      * 
      * @throws TransformerExceptions
